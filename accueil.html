@@ -14,9 +14,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 
-    .hover-effect:hover {
-      color: red;
-    }
+
     .title-hover {
       color: black;
       text-decoration: none;
@@ -63,7 +61,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     }
   
     .navbar a:hover {
-      background-color: #555;
+      background-color: #D3D3D3;
     }
 
     .dropdown {
@@ -120,7 +118,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 50%; /* Modification : taille réduite de l'image */
+  max-width: 80%; /* Modification : taille réduite de l'image */
   margin: 0 auto; /* Centre l'image horizontalement */
 }
 
@@ -128,6 +126,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   max-width: 100%;
   height: auto;
 }
+
+.title-hover {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.title-hover:hover {
+  font-weight: bold;
+}
+
+.hover-effect {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: scale(1.1);
+}
+
+
+
 
 
 </style>
@@ -138,7 +156,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="navbar">
     <a href="accueil.html">Accueil</a>
     <div class="dropdown">
-      <a href="index (7).html" class="dropbtn" target="_blank">Ressources sur les Humanités Numériques</a>
+      <a href="index.html" class="dropbtn" target="_blank">Ressources sur les Humanités Numériques</a>
     </div>
   
     <div class="dropdown">
@@ -168,6 +186,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="grid-container">
       <div class="container">
         <h1 class="title-hover" style="font-weight: bold;">Ressources sur les Humanités Numériques.</h1>
+        <h1 class="title-hover" style="font-weight: bold; font-size: 12px;">Site créé par Maxime Popineau, étudiant en 2ème année de Master Humanité Numérique, en juillet 2023.</h1>
       </div>
     </div>
     
@@ -175,23 +194,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <!-- First Grid -->
 
   <div class="w3-row-padding w3-white w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1 style="font-weight: bold;">Pourquoi ?</h1>
-      <h5 class="w3-padding-32"> De nouvelles technologies et de nombreux outils apparaissent de manière exponentielle tous les jours dans le domaine du numérique. Il devient donc essentiel d'avoir des ressources adéquates pour guider les nouveaux arrivants et arrivantes. C'est le principal objectif de l'initiative Digit_Hum et du projet EVEille. </h5>
-
-      <p class="w3-text-grey">Ce site a été réalisé lors d'un stage de deuxième année de Master Humanité Numérique dans le cadre de l'intiative Digit_Hum et du projet Eveille</p>
-    </div>
-
-    <div style="margin-right: auto;">
-      <a href="https://eveille.hypotheses.org/" target="_blank">
-        <img src="https://i.ibb.co/vY0J0cC/Capture-d-cran-2023-07-09-183336.png" alt="Image Description" style="width: 80%;">
-      </a>
-    </div>
-    <div style="margin-left: auto;">
-      <a href="https://digithum.huma-num.fr/" target="_blank">
-        <img src="https://i.ibb.co/qRPp9Yf/Capture-d-cran-2023-07-09-182715.png" alt="Image Description" style="width: 80%;">
-      </a>
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1 style="font-weight: bold;">A propos de cette page</h1>
+        <h5 class="w3-padding-32">Cette page permet d'indexer les différentes ressources présentes dans la bibliothèque Zotero commune.</h5>
+  
+        <p class="w3-text-grey">L'objectif de cette page externe des sites Digit_Hum et Eveille est de faciliter l'accès pour l'utilisateur aux différentes ressources proposées par Digit_Hum et Eveille.
+          Cette page externe permet à l'utilisateur de naviguer dans les ressources du Zotero grâce à une barre de recherche, des mots-clés et des tags.
+        </p>
+  
+        <p class="w3-text-grey">Vous pouvez accéder à cette page en cliquant sur "Ressources sur les Humanités Numériques" dans la barre de navigation en haut à gauche. </p>
+  
+      </div>
     </div>
   </div>
 </div>
@@ -199,21 +213,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1 style="font-weight: bold;">A propos de cette page</h1>
-      <h5 class="w3-padding-32">Cette page permet d'indexer les différentes ressources présentes dans la bibliothèque Zotero commune.</h5>
-
-      <p class="w3-text-grey">L'objectif de cette page externe des sites Digit_Hum et Eveille est de faciliter l'accès pour l'utilisateur aux différentes ressources proposées par Digit_Hum et Eveille.
-        Cette page externe permet à l'utilisateur de naviguer dans les ressources du Zotero grâce à une barre de recherche, des mots-clés et des tags.
-      </p>
-
-      <p class="w3-text-grey">Vous pouvez accéder à cette page en cliquant sur "Ressources sur les Humanités Numériques" dans la barre de navigation en haut à gauche. </p>
-
+      <h1 style="font-weight: bold;">Pourquoi ?</h1>
+      <h5 class="w3-padding-32">De nouvelles technologies et de nombreux outils apparaissent de manière exponentielle tous les jours dans le domaine du numérique. Il devient donc essentiel d'avoir des ressources adéquates pour guider les nouveaux arrivants et arrivantes. C'est le principal objectif de l'initiative Digit_Hum et du projet EVEille.</h5>
+      <p class="w3-text-grey">Ce site a été réalisé lors d'un stage de deuxième année de Master Humanité Numérique dans le cadre de l'initiative Digit_Hum et du projet EVEille.</p>
     </div>
 
+    <div class="w3-third" style="text-align: right;">
+      <a href="https://eveille.hypotheses.org/" target="_blank" class="title-hover">
+        <div class="image-container hover-effect">
+          <img src="https://i.ibb.co/PWW1Wp4/logo-classique-vf.png" alt="Image Description" style="width: 100%; max-height: auto;">
+        </div>
+      </a>
+    </div>
 
+    <div class="w3-third" style="text-align: left; margin-top: 20px;">
+      <a href="https://digithum.huma-num.fr/" target="_blank" class="title-hover">
+        <div class="image-container hover-effect">
+          <img src="https://i.ibb.co/VBTn6JJ/Visuel-label.png" alt="Image Description" style="width: 100%; max-height: auto;">
+        </div>
+      </a>
     </div>
   </div>
 </div>
+
 
 </body>
 </html>

@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Les</title>
+  <title>Ressources en Humanité Numérique</title>
   <link rel="stylesheet" href="style.css" />
-  <title>Automatic RSS Feeds</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://unpkg.com/rss-parser/dist/rss-parser.min.js"></script>
   <script src="https://www.zotero.org/support/dev/client_api/citationstyleresults.js"></script>
@@ -54,13 +53,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
   .container {
     width: 100%;
-    max-width: 1100px;
-    margin-top: 20px;
     background-color: #fff;
     /* White background color */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
   }
 
@@ -270,7 +264,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 
 .keyword:hover {
-  background-color: #555;
+  background-color: #D3D3D3;
   color: white;
   text-decoration-color: currentColor;
   text-decoration: none;
@@ -308,8 +302,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   font-family: "Fuse Regular", sans-serif;
 }
   
-    .navbar a:hover {
-      background-color: #555;
+.navbar a:hover {
+      background-color: #D3D3D3;
     }
 
     .dropdown {
@@ -445,8 +439,8 @@ border: 10px solid orangered;
 border: 10px solid forestgreen;
 }
 
-.popup-border-purpleteal {
-border: 10px solid purpleteal;
+.popup-border-purple {
+border: 10px solid purple;
 }
 
 .popup-border-gray {
@@ -469,6 +463,15 @@ border: 10px solid darkred;
 border: 10px solid gold;
 }
 
+.popup-border-teal {
+border: 10px solid teal;
+}
+
+.popup-border-limegreen {
+border: 10px solid teal;
+}
+
+
 </style>
 
 
@@ -477,7 +480,7 @@ border: 10px solid gold;
 <div class="navbar">
   <a href="accueil.html" target="_blank" >Accueil</a>
   <div class="dropdown">
-    <a href="index (7).html" class="dropbtn" target="_blank">Ressources sur les Humanités Numériques</a>
+    <a href="index.html" class="dropbtn" target="_blank">Ressources sur les Humanités Numériques</a>
   </div>
 
   <div class="dropdown">
@@ -509,6 +512,7 @@ border: 10px solid gold;
   <div class="grid-container">
     <div class="container">
       <h1 class="title-hover" style="font-weight: bold;">Ressources sur les Humanités Numériques.</h1>
+      <h1 class="title-hover" style="font-weight: bold; font-size: 12px;">Site créé par Maxime Popineau, étudiant en 2ème année de Master Humanité Numérique, en juillet 2023.</h1>
     </div>
   </div>
    
@@ -519,11 +523,14 @@ border: 10px solid gold;
         <h5 class="w3-padding-32">Les ressources sont disponibles sous forme de pop-up lorsque vous passez votre souris sur le nom de la catégorie. Il est nécessaire d'autoriser les pop-ups dans votre navigateur pour obtenir les ressources dans le tableau. </h5>
         <p class="w3-text-grey">La liste des mots-clés est une liste commune à Digit_Hum et à Eveille provenant de la bibliothèque commune Zotero.</p>
 
-
-        <table>
+        <table id="table">
           <tr>
+            <td class="table-cell" style="background-color: lightskyblue; color: white; padding: 10px;">
+              <h3 class="link" onclick="openLinksInPopup('itemList23', 'popup-border-lightskyblue')" onmouseover="changeColor(this)">Acquisition</h3>
+              <ul id="itemList23" style="display: none;"></ul>
+            </td>
             <td class="table-cell" style="background-color: gold; color: white;">
-              <h3 class="link" onclick="openLinksInPopup('itemList2')" onmouseover="changeColor(this)">Analyse</h3>
+              <h3 class="link" onclick="openLinksInPopup('itemList2', 'popup-border-gold')" onmouseover="changeColor(this)">Analyse</h3>
               <ul id="itemList2" style="display: none;">
                 <li><h1>Analyse du web</h1></li>
                 <ul id="itemList3"></ul>
@@ -531,20 +538,20 @@ border: 10px solid gold;
                 <ul id="itemList4"></ul>
               </ul>
             </td>
-            <td class="table-cell" style="background-color: #5FB236; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList5')" onmouseover="changeColor(this)">Environnement collaboratif</h3>
-              <ul id="itemList5" style="display: none;"></ul>
+            <td class="table-cell" style="background-color: darkcyan; color: white; padding: 10px;">
+              <h3 class="link" onclick="openLinksInPopup('itemList27', 'popup-border-darkcyan')" onmouseover="changeColor(this)">Art et culture</h3>
+              <ul id="itemList27" style="display: none;"></ul>
             </td>
             <td class="table-cell" style="background-color: orange; color: white; padding: 10px;">
               <h3 class="link" onclick="openLinksInPopup('itemList6', 'popup-border-orange')" onmouseover="changeColor(this)">Bibliothèque numérique</h3>
               <ul id="itemList6" style="display: none;"></ul>
             </td>
-            <td class="table-cell" style="background-color: #029980; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList7')" onmouseover="changeColor(this)">Cartographie et visualisation</h3>
-              <ul id="itemList7" style="display: none;"></ul>
-            </td>
           </tr>
           <tr>
+            <td class="table-cell" style="background-color: #029980; color: white; padding: 10px;">
+              <h3 class="link" onclick="openLinksInPopup('itemList11', 'popup-border-popup-border-tealgreen')" onmouseover="changeColor(this)">Cartographie et visualisation</h3>
+              <ul id="itemList11" style="display: none;"></ul>
+            </td>
             <td class="table-cell" style="background-color: red; color: white; padding: 10px;">
               <h3 class="link" onclick="openLinksInPopup('itemList8', 'popup-border-red')" onmouseover="changeColor(this)">Diffusion</h3>
               <ul id="itemList8" style="display: none;"></ul>
@@ -557,33 +564,53 @@ border: 10px solid gold;
               <h3 class="link" onclick="openLinksInPopup('itemList10', 'popup-border-pink')" onmouseover="changeColor(this)">Ecriture scientifique</h3>
               <ul id="itemList10" style="display: none;"></ul>
             </td>
+          </tr>
+          <tr>
             <td class="table-cell" style="background-color: dodgerblue; color: white; padding: 10px;">
               <h3 class="link" onclick="openLinksInPopup('itemList11', 'popup-border-dodgerblue')" onmouseover="changeColor(this)">Edition numérique</h3>
               <ul id="itemList11" style="display: none;"></ul>
-            </td>
-          </tr>
-          <tr>
-            <td class="table-cell" style="background-color: gray; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList12', 'popup-border-gray')" onmouseover="changeColor(this)">Transcription</h3>
-              <ul id="itemList12" style="display: none;"></ul>
             </td>
             <td class="table-cell" style="background-color: teal; color: white; padding: 10px;">
               <h3 class="link" onclick="openLinksInPopup('itemList13', 'popup-border-teal')" onmouseover="changeColor(this)">Enseignement, formation et recherche</h3>
               <ul id="itemList13" style="display: none;"></ul>
             </td>
-            <td class="table-cell" style="background-color: purple; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList14', 'popup-border-purple')" onmouseover="changeColor(this)">Histoire et société</h3>
-              <ul id="itemList14" style="display: none;"></ul>
+            <td class="table-cell" style="background-color: limegreen; color: white; padding: 10px;">
+              <h3 class="link" onclick="openLinksInPopup('itemList5', 'popup-border-limegreen')" onmouseover="changeColor(this)">Environnement collaboratif</h3>
+              <ul id="itemList5" style="display: none;"></ul>
             </td>
-            <td class="table-cell" style="background-color: forestgreen; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList15', 'popup-border-forestgreen')" onmouseover="changeColor(this)">Ingénierie</h3>
+            <td class="table-cell" style="background-color: blueviolet; color: white; padding: 10px;">
+              <h3 class="link" onclick="openLinksInPopup('itemList15', 'popup-border-blueviolet')" onmouseover="changeColor(this)">Fondamentaux</h3>
               <ul id="itemList15" style="display: none;"></ul>
             </td>
           </tr>
           <tr>
+            <td class="table-cell" style="background-color: purple; color: white; padding: 10px;">
+              <h3 class="link" onclick="openLinksInPopup('itemList14', 'popup-border-purple')" onmouseover="changeColor(this)">Histoire et société</h3>
+              <ul id="itemList14" style="display: none;"></ul>
+              </td>
+              <td class="table-cell" style="background-color: forestgreen; color: white; padding: 10px;">
+                <h3 class="link" onclick="openLinksInPopup('itemList15', 'popup-border-forestgreen')" onmouseover="changeColor(this)">Ingénierie</h3>
+                <ul id="itemList15" style="display: none;"></ul>
+              </td>
+
+            </td>
+            <td class="table-cell" style="background-color: lightsalmon; color: white; padding: 10px;">
+              <h3 class="link" onclick="openLinksInPopup('itemList25', 'popup-border-lightsalmon')" onmouseover="changeColor(this)">Langage informatique</h3>
+              <ul id="itemList25" style="display: none;"></ul>
+            </td>
             <td class="table-cell" style="background-color: orangered; color: white; padding: 10px;">
               <h3 class="link" onclick="openLinksInPopup('itemList16', 'popup-border-orangered')" onmouseover="changeColor(this)">Manifestation</h3>
               <ul id="itemList16" style="display: none;"></ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-cell" style="background-color: lightslategray; color: white; padding: 10px;">
+              <h3 class="link" onclick="openLinksInPopup('itemList26', 'popup-border-lightslategray')" onmouseover="changeColor(this)">Numésthésie</h3>
+              <ul id="itemList26" style="display: none;"></ul>
+            </td>
+            <td class="table-cell" style="background-color: magenta; color: white; padding: 10px;">
+              <h3 class="link" onclick="openLinksInPopup('itemList21', 'popup-border-magenta')" onmouseover="changeColor(this)">Ressources</h3>
+              <ul id="itemList21" style="display: none;"></ul>
             </td>
             <td class="table-cell" style="background-color: royalblue; color: white; padding: 10px;">
               <h3 class="link" onclick="openLinksInPopup('itemList17', 'popup-border-royalblue')" onmouseover="changeColor(this)">Science ouverte</h3>
@@ -594,81 +621,69 @@ border: 10px solid gold;
                 <ul id="itemList19"></ul>
               </ul>
             </td>
-            <td class="table-cell" style="background-color: lightcoral; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList20', 'popup-border-lightcoral')" onmouseover="changeColor(this)">Veille</h3>
-              <ul id="itemList20" style="display: none;"></ul>
-            </td>
-            <td class="table-cell" style="background-color: magenta; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList21', 'popup-border-darkred')" onmouseover="changeColor(this)">Ressources</h3>
-              <ul id="itemList21" style="display: none;"></ul>
-            </td>
-          </tr>
-          <tr>
-            <td class="table-cell" style="background-color: blueviolet; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList22', 'popup-border-blueviolet')" onmouseover="changeColor(this)">Fondamentaux</h3>
-              <ul id="itemList22" style="display: none;"></ul>
-            </td>
-            <td class="table-cell" style="background-color: lightskyblue; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList23', 'popup-border-lightskblued')" onmouseover="changeColor(this)">Acquisition</h3>
-              <ul id="itemList23" style="display: none;"></ul>
-            </td>
             <td class="table-cell" style="background-color: lightseagreen; color: white; padding: 10px;">
               <h3 class="link" onclick="openLinksInPopup('itemList24', 'popup-border-lightseagreen')" onmouseover="changeColor(this)">Traitement automatique des langues</h3>
               <ul id="itemList24" style="display: none;"></ul>
             </td>
-            <td class="table-cell" style="background-color: lightsalmon; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList25', 'popup-border-lightsalmon')" onmouseover="changeColor(this)">Langage informatique</h3>
-              <ul id="itemList25" style="display: none;"></ul>
-            </td>
           </tr>
-          <tr>
-            <td class="table-cell" style="background-color: lightslategray; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList26', 'popup-border-lightslategray')" onmouseover="changeColor(this)">Numésthésie</h3>
-              <ul id="itemList26" style="display: none;"></ul>
-            </td>
-            <td class="table-cell" style="background-color: darkcyan; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList27', 'popup-border-darkcyan')" onmouseover="changeColor(this)">Art et culture</h3>
-              <ul id="itemList27" style="display: none;"></ul>
+          <td class="table-cell" style="background-color: gray; color: white; padding: 10px;">
+            <h3 class="link" onclick="openLinksInPopup('itemList12', 'popup-border-gray')" onmouseover="changeColor(this)">Transcription</h3>
+            <ul id="itemList12" style="display: none;"></ul>
             </td>
             <td class="table-cell" style="background-color: darkolivegreen; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList28','popup-border-darkolivegreen')" onmouseover="changeColor(this)">test1</h3>
+              <h3 class="link" onclick="openLinksInPopup('itemList28','popup-border-darkolivegreen')" onmouseover="changeColor(this)"></h3>
               <ul id="itemList28" style="display: none;"></ul>
             </td>
             <td class="table-cell" style="background-color: darkkhaki; color: white; padding: 10px;">
-              <h3 class="link" onclick="openLinksInPopup('itemList29','popup-border-darkhaki')" onmouseover="changeColor(this)">test2</h3>
+              <h3 class="link" onclick="openLinksInPopup('itemList29','popup-border-darkhaki')" onmouseover="changeColor(this)"></h3>
               <ul id="itemList29" style="display: none;"></ul>
-            </td>
+              </td>
+              <td class="table-cell" style="background-color: lightcoral; color: white; padding: 10px;">
+                <h3 class="link" onclick="openLinksInPopup('itemList20', 'popup-border-lightcoral')" onmouseover="changeColor(this)">Veille</h3>
+                <ul id="itemList20" style="display: none;"></ul>
+              </td>
+          
+          
+              </td>
           </tr>
         </table>
         
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1 style="font-weight: bold;">Rechercher des mots-clés dans les titres</h1>
+            <h5 class="w3-padding-32">La barre de recherche vous permet de chercher des mots-clés dans le titre des ressources présentes dans la bibliothèque Zotero.</h5>
+      
+            <p class="w3-text-grey"> L'objectif est d'indexer les ressources pour qu'elles soient le plus facilement accessible. </p>
+            <h1>Barre de recherche</h1>
+            <input type="text" id="searchInput" placeholder="Rechercher par titre">
+            <button onclick="searchItems()">Rechercher</button>
+            <h1>Résultats</h1>
+            <ul id="myItemList1"></ul>
+            <div class="pagination1">
+              <button onclick="updatePage('previous')">Précédent</button>
+              <span id="currentPage"></span>
+              <button onclick="updatePage('next')">Suivant</button>
+            </div>
+
+              <h1>Mots-clés</h1>
+              <div id="keyword-cloud"></div>
+
+
     </div>
   </div>
 </div>
-
-
+</div>
         
-          <div class="w3-content">
-            <div class="w3-twothird">
-              <h1 style="font-weight: bold;">Rechercher des mots-clés dans les titres</h1>
-              <h5 class="w3-padding-32">La barre de recherche vous permet de chercher des mots-clés dans le titre des ressources présentes dans la bibliothèque Zotero.</h5>
-        
-              <p class="w3-text-grey"> L'objectif est d'indexer les ressources pour qu'elles soient le plus facilement accessible. </p>
-              <h1>Barre de recherche</h1>
-              <input type="text" id="searchInput" placeholder="Rechercher par titre">
-              <button onclick="searchItems()">Rechercher</button>
-              <h1>Résultats</h1>
-              <ul id="myItemList1"></ul>
-              <div class="pagination1">
-                <button onclick="updatePage('previous')">Précédent</button>
-                <span id="currentPage"></span>
-                <button onclick="updatePage('next')">Suivant</button>
-                <h1>Mots-clés</h1>
-                <div id="keyword-cloud"></div>
-  
-
-      </div>
     </div>
   </div>
+  </div>
+
+
+<div>
+
+
+        
+        
 
 
         <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
@@ -934,7 +949,9 @@ border: 10px solid gold;
           }
         });
 
-        function openLinksInPopup(itemListId, cellColorClass) {
+        var currentPopup = null; // Variable to store the reference to the current pop-up window
+
+function openLinksInPopup(itemListId, cellColorClass) {
   var itemList = document.getElementById(itemListId).innerHTML;
 
   // Create a div element to display the content of the links
@@ -944,27 +961,35 @@ border: 10px solid gold;
   // Add styles to the content div
   popupContent.style.backgroundColor = '#fff'; // Container background color: white
   popupContent.style.color = '#000'; // Text color: black
-  popupContent.style.margin = '10px'; // Add margin
+  popupContent.style.padding = '10px'; // Add padding
 
   // Create a div for the pop-up window
   var popupWindow = document.createElement('div');
   popupWindow.style.position = 'fixed';
-  popupWindow.style.top = '0';
-  popupWindow.style.right = '0';
-  popupWindow.style.width = '300px';
-  popupWindow.style.height = '50%';
-  popupWindow.style.backgroundColor = 'transparent'; // Set the background color to transparent
-  popupWindow.style.color = '#000'; // Text color: black
+  popupWindow.style.top = '50%';
+  popupWindow.style.left = '0';
+  popupWindow.style.transform = 'translate(0, -50%)';
+  popupWindow.style.width = 'auto';
+  popupWindow.style.maxWidth = '80%';
+  popupWindow.style.maxHeight = '80%';
+  popupWindow.style.backgroundColor = '#fff'; // Set the background color to white
+  popupWindow.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.2)'; // Add a box shadow for a visual effect
   popupWindow.style.overflowY = 'auto'; // Enable vertical scrolling if needed
-  popupWindow.style.resize = 'both'; // Enable resizing
-  popupWindow.style.zIndex = '999'; // Set a higher z-index for draggable behavior
+  popupWindow.style.zIndex = '999'; // Set a higher z-index for overlapping other elements
   popupWindow.classList.add(cellColorClass); // Add the color class for the border
 
   // Create a close button
   var closeButton = document.createElement('button');
   closeButton.innerHTML = 'x';
-  closeButton.style.float = 'right';
-  closeButton.style.margin = '10px';
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '10px';
+  closeButton.style.right = '10px';
+  closeButton.style.padding = '5px';
+  closeButton.style.backgroundColor = 'transparent';
+  closeButton.style.border = 'none';
+  closeButton.style.fontSize = '20px';
+  closeButton.style.color = '#000';
+  closeButton.style.cursor = 'pointer';
 
   // Add the close button to the pop-up window
   popupWindow.appendChild(closeButton);
@@ -979,73 +1004,76 @@ border: 10px solid gold;
   closeButton.addEventListener('click', function () {
     // Remove the pop-up window from the main page
     document.body.removeChild(popupWindow);
+    // Reset the currentPopup variable
+    currentPopup = null;
   });
 
   // Make the pop-up window draggable
   dragElement(popupWindow);
 
+  // Close the previous pop-up if it exists
+  if (currentPopup) {
+    document.body.removeChild(currentPopup);
+  }
 
+  // Store the reference to the current pop-up
+  currentPopup = popupWindow;
 
-    // Function to make an element draggable
-    function dragElement(element) {
-      var pos1 = 0,
-        pos2 = 0,
-        pos3 = 0,
-        pos4 = 0;
-      element.onmousedown = dragMouseDown;
+  // Function to make an element draggable
+  function dragElement(element) {
+    var pos1 = 0,
+      pos2 = 0,
+      pos3 = 0,
+      pos4 = 0;
+    element.onmousedown = dragMouseDown;
 
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-      }
-
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        element.style.top = element.offsetTop - pos2 + 'px';
-        element.style.left = element.offsetLeft - pos1 + 'px';
-      }
-
-      function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-      }
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      document.onmousemove = elementDrag;
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-      // Add click event listeners to each hyperlink in the pop-up content
-      var links = popupContent.querySelectorAll('a');
-      links.forEach(function (link) {
-        link.addEventListener('click', function (event) {
-          event.preventDefault(); // Prevent the default link behavior
-          var url = link.getAttribute('href'); // Get the URL from the href attribute
-          window.open(url, '_blank'); // Open the link in a new tab
-        });
-      });
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      element.style.top = element.offsetTop - pos2 + 'px';
+      element.style.left = element.offsetLeft - pos1 + 'px';
+    }
 
-      // Add event listener for category links
-      var categories = document.querySelectorAll('.link');
-      categories.forEach(function (category) {
-        category.addEventListener('click', function () {
-          var itemListId = this.getAttribute('data-itemlist');
-          openLinksInNewTab(itemListId);
-        });
+    function closeDragElement() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Add click event listeners to each hyperlink in the pop-up content
+    var links = popupContent.querySelectorAll('a');
+    links.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default link behavior
+        var url = link.getAttribute('href'); // Get the URL from the href attribute
+        window.open(url, '_blank'); // Open the link in a new tab
       });
     });
 
-    // Adjust the size of the pop-up window based on the number of items
-    var windowHeight = popupContent.offsetHeight + 60; // Add extra space for the close button
-    popupWindow.style.height = windowHeight + 'px';
-  }
-
+    // Add event listener for category links
+    var categories = document.querySelectorAll('.link');
+    categories.forEach(function (category) {
+      category.addEventListener('click', function () {
+        var itemListId = this.getAttribute('data-itemlist');
+        openLinksInPopup(itemListId, cellColorClass);
+      });
+    });
+  });
+}
 
 
 
@@ -1219,45 +1247,7 @@ border: 10px solid gold;
           });
         }
 
-        // function createPagination(totalPages, currentPage, itemsPerPage, filteredItems, resultsElement) {
-        //   const paginationElement = document.getElementById("pagination");
-        //   paginationElement.innerHTML = "";
-
-        //   for (let i = 1; i <= totalPages; i++) {
-        //     const pageButton = document.createElement("button");
-        //     pageButton.textContent = i;
-
-        //     if (i === currentPage) {
-        //       pageButton.disabled = true;
-        //     }
-
-        //     pageButton.addEventListener("click", () => {
-        //       currentPage = i;
-        //       resultsElement.innerHTML = "";
-        //       displayResults(currentPage, itemsPerPage, filteredItems, resultsElement);
-        //     });
-
-        //     paginationElement.appendChild(pageButton);
-        //   }
-        // }
-
-        // Event listener for the search button
-        // const searchButton = document.getElementById("search-button");
-        // searchButton.addEventListener("click", () => {
-        //   const keywords = document.getElementById("search-bar").value.trim().split(" ");
-        //   const limit = 100; // Set the desired limit of results per page
-        //   fetchAllItems(limit).then(data => searchZoteroCollection(keywords, data, limit));
-        // });
-
-        // Event listener for the search bar to trigger search on Enter key press
-        // const searchInput = document.getElementById("search-bar");
-        // searchInput.addEventListener("keyup", (event) => {
-        //   if (event.keyCode === 13) {
-        //     const keywords = searchInput.value.trim().split(" ");
-        //     const limit = 100; // Set the desired limit of results per page
-        //     fetchAllItems(limit).then(data => searchZoteroCollection(keywords, data, limit));
-        //   }
-        // });
+    
 
         // Fetch all items in the Zotero collection and display the initial keyword cloud
         const limit = 100; // Set the desired limit of results per page
@@ -1309,8 +1299,6 @@ initialKeywords.forEach((keyword, index) => {
   const keywordElement = document.createElement("span");
   keywordElement.classList.add("keyword");
   keywordElement.style.fontSize = `${fontSize}px`;
-  keywordElement.style.color = "blue";
-  keywordElement.style.textDecoration = "underline";
   keywordElement.textContent = keyword;
 
   keywordElement.addEventListener("click", () => {
@@ -1318,11 +1306,11 @@ initialKeywords.forEach((keyword, index) => {
   });
 
   keywordElement.addEventListener("mouseover", () => {
-    keywordElement.style.fontWeight = "bold";
+    keywordElement.classList.add("hover-effect");
   });
 
   keywordElement.addEventListener("mouseout", () => {
-    keywordElement.style.fontWeight = "normal";
+    keywordElement.classList.remove("hover-effect");
   });
 
   keywordCloudElement.appendChild(keywordElement);
@@ -1361,74 +1349,12 @@ function searchItems(keyword) {
 
 
 
-        function createPagination(totalPages, currentPage, itemsPerPage, filteredItems, resultsElement) {
-          const paginationElement = document.getElementById("pagination");
-          paginationElement.innerHTML = "";
+      
 
-          const previousPageButton = document.createElement("button");
-          previousPageButton.innerHTML = "&#8678;"; // Left arrow Unicode
-          previousPageButton.disabled = currentPage === 1;
-          previousPageButton.addEventListener("click", () => {
-            currentPage = Math.max(1, currentPage - 1);
-            resultsElement.innerHTML = "";
-            displayResults(currentPage, itemsPerPage, filteredItems, resultsElement);
-            createPagination(totalPages, currentPage, itemsPerPage, filteredItems, resultsElement);
-          });
-          paginationElement.appendChild(previousPageButton);
-
-          const firstPageButton = document.createElement("button");
-          firstPageButton.textContent = "1";
-          firstPageButton.disabled = currentPage === 1;
-          firstPageButton.addEventListener("click", () => {
-            currentPage = 1;
-            resultsElement.innerHTML = "";
-            displayResults(currentPage, itemsPerPage, filteredItems, resultsElement);
-            createPagination(totalPages, currentPage, itemsPerPage, filteredItems, resultsElement);
-          });
-          paginationElement.appendChild(firstPageButton);
-
-          if (totalPages > 1 && currentPage > 20) {
-            const firstPageOfKeywordsButton = document.createElement("button");
-            firstPageOfKeywordsButton.textContent = "Page 1";
-            firstPageOfKeywordsButton.addEventListener("click", () => {
-              currentPage = 1;
-              resultsElement.innerHTML = "";
-              displayResults(currentPage, itemsPerPage, filteredItems, resultsElement);
-              createPagination(totalPages, currentPage, itemsPerPage, filteredItems, resultsElement);
-            });
-            paginationElement.appendChild(firstPageOfKeywordsButton);
-          }
-
-          for (let i = 2; i <= totalPages; i++) {
-            const pageButton = document.createElement("button");
-            pageButton.textContent = i;
-            pageButton.disabled = i === currentPage;
-            pageButton.addEventListener("click", () => {
-              currentPage = i;
-              resultsElement.innerHTML = "";
-              displayResults(currentPage, itemsPerPage, filteredItems, resultsElement);
-              createPagination(totalPages, currentPage, itemsPerPage, filteredItems, resultsElement);
-            });
-            paginationElement.appendChild(pageButton);
-          }
-
-          const nextPageButton = document.createElement("button");
-          nextPageButton.innerHTML = "&#8680;"; // Right arrow Unicode
-          nextPageButton.disabled = currentPage === totalPages;
-          nextPageButton.addEventListener("click", () => {
-            currentPage = Math.min(totalPages, currentPage + 1);
-            resultsElement.innerHTML = "";
-            displayResults(currentPage, itemsPerPage, filteredItems, resultsElement);
-            createPagination(totalPages, currentPage, itemsPerPage, filteredItems, resultsElement);
-          });
-          paginationElement.appendChild(nextPageButton);
-        }
-
-        // Identifiants d'accès à l'API Zotero
         var apiKey = 'yQraJQogHA89BHu3VJBKXLha';
         var userId = '9668586';
         var collectionId = 'TEJRE3BW';
-        var limit1 = 25;
+        var limit1 = 10;
         var start = 0;
         var countItems = 0;
 
@@ -1519,141 +1445,157 @@ function searchItems(keyword) {
         repeatedAPICall(zoteroGetTags, 0)
           .then(result => console.log(result)); // use your callbacks here
 
+
           var apiKey = 'yQraJQogHA89BHu3VJBKXLha';
-var userId = '9668586';
-var collectionId = 'TEJRE3BW';
-var limit1 = 20;
-var currentPage = 1;
-var totalPages = 0;
-var currentSearchQuery = '';
+        var userId = '9668586';
+        var collectionId = 'TEJRE3BW';
+        var limit1 = 10;
+        var pageSize = 10;
+        var start = 0;
+        var count = 0;
+        var currentPage = 0;
+        var nbPages = 0;
 
-async function zoteroGetItems(startValue, searchQuery) {
-  try {
-    var apiUrl = `https://api.zotero.org/users/${encodeURIComponent(userId)}/collections/${encodeURIComponent(collectionId)}/items?format=json&limit=${limit}&start=${startValue}`;
-    if (searchQuery !== '') {
-      apiUrl += `&q=${encodeURIComponent(searchQuery)}`;
+        async function zoteroGetItems(startValue, searchQuery) {
+            try {
+                var apiUrl = `https://api.zotero.org/users/${encodeURIComponent(userId)}/collections/${encodeURIComponent(collectionId)}/items?format=json&limit=${pageSize}&start=${startValue}`;
+                if (searchQuery !== '') {
+                    apiUrl += `&q=${encodeURIComponent(searchQuery)}`;
+                }
+                console.log('searchQuery:', searchQuery, 'startValue:', startValue);
+                const response = await fetch(apiUrl, {
+                    headers: {
+                        'Zotero-API-Version': '3',
+                        'Zotero-API-Key': apiKey,
+                    },
+                });
+                const data = await response.json();
+                console.log('Count:', data.length);
+                if (data.length == 0) {
+                    return null;
+                }
+                nbPages++;
+                console.log('Retrieved items:', data); // Check the retrieved items in the browser console
+
+                var myItemList1 = document.getElementById('myItemList1');
+                
+                count = 0;
+                data.forEach(item => {
+                    var itemElement = document.createElement('li');
+                    if (currentPage != nbPages) {
+                        itemElement.style.display = 'none';
+                    }
+                    itemElement.classList.add(`page${nbPages}`);
+                    var itemLink = document.createElement('a');
+                    itemLink.textContent = item.data.title;
+                    itemLink.href = item.data.url;
+                    itemLink.target = '_blank';
+                    itemElement.appendChild(itemLink);
+                    myItemList1.appendChild(itemElement);
+                    count++;
+                });
+
+                myItemList1.style.height = `${myItemList1.scrollHeight}px`;
+
+                
+                if (count == pageSize) {
+                    console.log('count == pageSize');
+                    return (startValue+count);
+                }
+                else {
+                    // console.log('count != limit');
+                    return null;
+                }
+            } catch (error) {
+                console.error('An error occurred while retrieving items from the Zotero collection:', error);
+            }
+        }
+
+        function searchItems() {
+            var searchQuery = document.getElementById('searchInput').value;
+            var myItemList1 = document.getElementById('myItemList1');
+            myItemList1.innerHTML = '';
+            nbPages = 0;
+            currentPage = 1;
+            repeatedAPICall(startValue => zoteroGetItems(startValue, searchQuery), 0)
+                .then(result => console.log(result)); // use your callbacks here
+            document.getElementById('currentPage').textContent = currentPage;
+        }
+
+        function updatePage(action) {
+            if (action === 'previous') {
+                if (currentPage > 1) {
+                    eltCurrentPage = document.getElementsByClassName(`page${currentPage}`);
+                    for (var i = 0; i < eltCurrentPage.length; i++) {
+                        eltCurrentPage[i].style.display = 'none';
+                    }
+                    eltPreviousPage = document.getElementsByClassName(`page${currentPage-1}`);
+                    for (var i = 0; i < eltPreviousPage.length; i++) {
+                        eltPreviousPage[i].style.display = 'block';
+                    }
+                    currentPage--;
+                    document.getElementById('currentPage').textContent = currentPage;
+                }
+            } else if (action === 'next') {
+                if (currentPage < nbPages) {
+                    eltCurrentPage = document.getElementsByClassName(`page${currentPage}`);
+                    for (var i = 0; i < eltCurrentPage.length; i++) {
+                        eltCurrentPage[i].style.display = 'none';
+                    }
+                    eltNextPage = document.getElementsByClassName(`page${currentPage+1}`);
+                    for (var i = 0; i < eltNextPage.length; i++) {
+                        eltNextPage[i].style.display = 'block';
+                    }
+                    currentPage++;
+                    document.getElementById('currentPage').textContent = currentPage;
+                }
+            }
+        }
+
+        async function repeatedAPICall(
+            apiCall,
+            startValue
+        ) {
+            const keys = [startValue];
+            const result = [];
+            data = null;
+
+            for (const callKey of keys) {
+                console.log('callKey ', callKey);
+                const data = await apiCall(callKey);
+                console.log('data ', data);
+                // result.push(data);
+                if (data !== undefined && data !== null) keys.push(data);
+            }
+
+            return result;
+        }
+
+function openPopup(title, url) {
+  if (currentPopup) {
+    document.body.removeChild(currentPopup); // Remove the current popup if it exists
+  }
+
+  var popupContent = document.createElement('div');
+  popupContent.innerHTML = `<h2>${title}</h2><p>URL: <a href="${url}" target="_blank">${url}</a></p>`;
+
+  var popupWindow = document.createElement('div');
+  popupWindow.classList.add('popup');
+  popupWindow.appendChild(popupContent);
+
+  document.body.appendChild(popupWindow);
+
+  currentPopup = popupWindow;
+
+  popupWindow.addEventListener('click', function (event) {
+    if (event.target === popupWindow) {
+      document.body.removeChild(popupWindow); // Remove the popup when clicked outside the content
+      currentPopup = null;
     }
-    const response = await fetch(apiUrl, {
-      headers: {
-        'Zotero-API-Version': '3',
-        'Zotero-API-Key': apiKey,
-      },
-    });
-    const data = await response.json();
-
-    console.log('Retrieved items:', data); // Check the retrieved items in the browser console
-
-    var myItemList1 = document.getElementById('myItemList1');
-    myItemList1.innerHTML = '';
-
-    data.forEach(item => {
-      var itemElement = document.createElement('li');
-      var itemLink = document.createElement('a');
-      itemLink.textContent = item.data.title;
-      itemLink.href = item.data.url;
-      itemLink.target = '_blank';
-      itemElement.appendChild(itemLink);
-      myItemList1.appendChild(itemElement);
-    });
-
-    myItemList1.style.height = `${myItemList1.scrollHeight}px`;
-
-    console.log('Count:', data.length);
-
-    return null;
-  } catch (error) {
-    console.error('An error occurred while retrieving items from the Zotero collection:', error);
-  }
+  });
 }
 
 
-
-
-
-function updatePagination() {
-  var currentPageElement = document.getElementById('currentPage');
-  if (totalPages === 1 && totalItems === 20) {
-    currentPageElement.textContent = `Page 1/1`;
-  } else {
-    currentPageElement.textContent = `Page ${currentPage}/${totalPages}`;
-  }
-  currentPageElement.classList.add('page-number'); // Add the CSS class to set text color to black
-}
-
-
-function searchItems() {
-  var searchQuery = document.getElementById('searchInput').value;
-  currentSearchQuery = searchQuery;
-  currentPage = 1;
-  loadItems();
-}
-
-function updatePage(action) {
-  if (action === 'previous') {
-    if (currentPage > 1) {
-      currentPage--;
-      loadItems();
-    }
-  } else if (action === 'next') {
-    var nextPageStartValue = currentPage * limit + 1;
-    if (nextPageStartValue <= totalItems) {
-      currentPage++;
-      loadItems();
-    }
-  }
-}
-
-
-
-async function getTotalPages() {
-  try {
-    var apiUrl = `https://api.zotero.org/users/${encodeURIComponent(userId)}/collections/${encodeURIComponent(collectionId)}/items?format=json&limit=1`;
-    if (currentSearchQuery !== '') {
-      apiUrl += `&q=${encodeURIComponent(currentSearchQuery)}`;
-    }
-    const response = await fetch(apiUrl, {
-      headers: {
-        'Zotero-API-Version': '3',
-        'Zotero-API-Key': apiKey,
-      },
-    });
-    const data = await response.json();
-
-    totalItems = data.length; // Update with the total number of items
-    totalPages = Math.ceil(totalItems / limit);
-  } catch (error) {
-    console.error('Une erreur s\'est produite lors de la récupération du nombre total de pages:', error);
-  }
-}
-
-
-async function loadItems() {
-  var startValue = (currentPage - 1) * limit;
-  if (startValue >= totalItems) {
-    currentPage = Math.ceil(totalItems / limit);
-    startValue = (currentPage - 1) * limit;
-  }
-  await zoteroGetItems(startValue, currentSearchQuery);
-  updatePagination();
-}
-
-function updatePagination() {
-  var currentPageElement = document.getElementById('currentPage');
-  var totalPages = Math.ceil(totalItems / limit);
-
-  if (totalItems <= limit || currentPage > totalPages) {
-    currentPageElement.textContent = `Page 1 sur 1`;
-  } else {
-    currentPageElement.textContent = `Page ${currentPage} sur ${totalPages}`;
-  }
-  currentPageElement.classList.add('page-number'); // Add the CSS class to set text color to black
-}
-
-
-// Appel initial pour récupérer le nombre total de pages
-getTotalPages().then(() => {
-  loadItems();
-});
 
 
 
