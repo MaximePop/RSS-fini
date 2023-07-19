@@ -1076,14 +1076,16 @@ function openLinksInPopup(itemListId, cellColorClass) {
 }
 
 
+function changeColor(element) {
+  element.addEventListener('mouseenter', function() {
+    element.style.color = 'black';
+  });
 
-        function changeColor(element) {
-          if (element.style.color === 'white') {
-            element.style.color = 'black';
-          } else {
-            element.style.color = 'white';
-          }
-        }
+  element.addEventListener('mouseleave', function() {
+    element.style.color = 'white';
+  });
+}
+
 
 
         document.addEventListener('DOMContentLoaded', function () {
