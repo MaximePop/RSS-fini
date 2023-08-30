@@ -269,24 +269,49 @@ function openLinksInPopup(itemListId, cellColorClass) {
 
 
 
-        function changeColor(element) {
-          if (element.style.color === 'white') {
-            element.style.color = 'black';
-          } else {
-            element.style.color = 'white';
-          }
-        }
+function changeColor(element, toBlack) {
+  if (toBlack) {
+    element.style.color = 'black';
+  } else {
+    element.style.color = 'white';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var categories = document.querySelectorAll('.link');
+  var lastClickedCategory = null;
+  
+  categories.forEach(function (category) {
+    category.addEventListener('click', function () {
+      var itemListId = this.getAttribute('data-itemlist');
+      openLinksInNewTab(itemListId);
+
+      if (lastClickedCategory) {
+        changeColor(lastClickedCategory, false);
+      }
+      
+      lastClickedCategory = this;
+      changeColor(lastClickedCategory, true);
+    });
+
+    category.addEventListener('mouseover', function () {
+      if (lastClickedCategory !== this) {
+        changeColor(category, true);
+      }
+    });
+
+    category.addEventListener('mouseout', function () {
+      if (lastClickedCategory !== this) {
+        changeColor(category, false);
+      }
+    });
+  });
+});
 
 
-        document.addEventListener('DOMContentLoaded', function () {
-          var categories = document.querySelectorAll('.link');
-          categories.forEach(function (category) {
-            category.addEventListener('click', function () {
-              var itemListId = this.getAttribute('data-itemlist');
-              openLinksInNewTab(itemListId);
-            });
-          });
-        });
+
+
+
 
         // Fetches the Zotero collection data and filters the items based on the provided keywords
         function searchZoteroCollection(keywords, allItems) {
